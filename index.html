@@ -4,9 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekt | Webbutveckling 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Första sidan (HOME) -->
 </head>
 <body>
-    <h1>Aktiv</h1>
+        <!-- Navbar skapar en navigationsmeny högst upp på sidan.
+     navbar-expand-lg = menyn är ihopfälld på små skärmar och
+     visas horisontellt från large (lg) och uppåt.
+     navbar-dark + bg-dark = mörk bakgrund och ljus text.-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <!-- container centrerar innehållet och ger marginaler på sidorna-->
+        <div class="container">
+
+            <!-- navbar-brand = logotyp eller webbplatsens namn-->
+            <a class="navbar-brand" href="#"><img src="/img/logo.jpg" width="110px" height="45px"></a>
+
+            <!-- navbar-toggler = en knapp osm visas på små skärmar (hamburgermeny).
+                    data-bs-toggle="collapse" (aktiverar Bootstrap-funktionen)
+                    data-bstarget="#menu" (kopplar knappen till elementet med id="menu")-->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                >
+            <!-- Ikonen som visas i toggler-lnappen-->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- collapse navbar-collapse = menyn kan fällas ihop.
+         id="menu" måste matcha data-bs-target i knappen ovan-->
+        <div class="collapse navbar-collapse" id="menu">
+
+            <!-- navbar-nav är listan med navigationslänkar.
+             ms-auto = betyder margin-start auto och flyttar menyn åt höger-->
+            <ul class="navbar-nav ms-auto">
+
+                <!-- nav-item = varje menyval-->
+                <li class="nav-item">
+                    <!-- nav-link = själva länken-->
+                    <a class="nav-link" href="#">Hem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Om oss</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+        <!-- Container som håller allt innegåll centrerat + padding på y-axeln. -->
+    <div class="container py-4">
+        <!-- Rubrike med marginal under (margin-bottom 3) -->
+        <h2 class="mb-3">Aktiv | pass💪</h2>
+        <!-- Row = rad i Bootsrap grid, g-3 = mellanrum mellan kolumner-->
+        <div class="row g-3">
+            <!-- Första kolumnen -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <!-- Kolumn: 100% på mobil, 50% på medium, 33% på large -->
+                <div class="card h-100">
+                    <!-- Kort-komponent som fyller hela höjden -->
+                    <div class="card-body">
+                        <!-- Titel på kortet -->
+                        <h5 class="card-title">Gruppträning 💪</h5>
+                        <!-- Beskrivande text -->
+                        <p class="card-text">Repetition + responsiv design.</p>
+                        <img src="/img/grupp.jpg" alt="grupp" width="100px" height="100px">
+                        <!-- Knapp med blå färg -->
+                        <a href="#" class="btn btn-primary">Boka</a>
+                    </div>
+                </div>    
+            </div>
+            <!-- Andra kolumnen (samma grid-system)-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Spinning klasser 🚴🏼</h5>
+                        <p class="card-text">Svettas och upplev gemenskap!</p>
+                        <img src="/img/spinning.avif" alt="spinning" width="100px" height="100px">
+                        <!-- Grön knapp-->
+                        <a href="#" class="btn btn-primary">Boka</a>
+                    </div>
+                </div>    
+            </div>
+            <!-- Tredje kolumnen -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Yoga pass 🧘</h5>
+                        <p class="card-text">Flexibilitet och styrka!</p>
+                        <img src="/img/yoga.jpg" alt="yoga" width="100px" height="100px">
+                        <!-- Gul/orange knapp -->
+                        <a href="#" class="btn btn-primary">Boka</a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
