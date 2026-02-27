@@ -1,3 +1,36 @@
+body {
+    display: grid;
+        grid-template-areas: 
+        "hdr hdr hdr hdr hdr hdr"
+        "main main main side side side"
+        "ftr ftr ftr ftr ftr ftr";
+    grid-template-rows: auto auto auto;
+    gap: 3px;
+}
+.hdr {
+    grid-area: hdr;
+}
+.main {
+    grid-area: main;
+    border: 2px solid black;
+}
+.side {
+    grid-area: side;
+    border: 2px solid black;
+    text-align: center;
+}
+.ftr {
+    grid-area: ftr;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    border: 2px solid black;
+}
+
+.txt_area {
+    text-align: center;
+}
 #imgGrupp {
     width: 150px;
     height: 120px;
