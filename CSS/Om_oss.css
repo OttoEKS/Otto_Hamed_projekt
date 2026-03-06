@@ -1,0 +1,31 @@
+/* Style för tabellen i AJAX funktionen*/
+table,th,td {
+border : 1px solid black;
+border-collapse: collapse;
+text-align: center;
+}
+th,td {
+padding: 5px;
+}
+th {
+    background-color: gray;
+}
+
+#table_btn {
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+}
+#table_btn:hover {
+    border-radius: 8px;
+    background-color: green;
+}
+
+.tableContainer {
+    gap: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 30%; 
+    padding-top: 15px;
+}

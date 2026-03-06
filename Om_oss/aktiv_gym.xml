@@ -1,0 +1,38 @@
+<GYMS>
+    <GYM>
+        <NAMN>Aktiv Solna</NAMN>
+        <ADRESS>Försundaleden 3</ADRESS>
+        <KVADRAT>1005 kvm</KVADRAT>
+        <PRIS>230 kr/mån</PRIS>
+    </GYM>
+    <GYM>
+        <NAMN>Aktiv Östermalm</NAMN>
+        <ADRESS>Skeppargatan 8</ADRESS>
+        <KVADRAT>730 kvm</KVADRAT>
+        <PRIS>250 kr/mån</PRIS>
+    </GYM>
+    <GYM>
+        <NAMN>Aktiv Bromma</NAMN>
+        <ADRESS>Kvarnbacksvägen 1</ADRESS>
+        <KVADRAT>1400 kvm</KVADRAT>
+        <PRIS>300 kr/mån</PRIS>
+    </GYM>
+    <GYM>
+        <NAMN>Aktiv Södermalm</NAMN>
+        <ADRESS>Mariatorget 3</ADRESS>
+        <KVADRAT>800 kvm</KVADRAT>
+        <PRIS>240 kr/mån</PRIS>
+    </GYM>
+    <GYM>
+        <NAMN>Aktiv Nacka</NAMN>
+        <ADRESS>Vikdalsvägen 5</ADRESS>
+        <KVADRAT>930 kvm</KVADRAT>
+        <PRIS>240 kr/mån</PRIS>
+    </GYM>
+    <GYM>
+        <NAMN>Akktiv Kungsholmen</NAMN>
+        <ADRESS>Fleminggatan 33</ADRESS>
+        <KVADRAT>680 kvm</KVADRAT>
+        <PRIS>290 kr/mån</PRIS>
+    </GYM>
+</GYMS>

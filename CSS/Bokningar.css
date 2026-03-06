@@ -1,0 +1,41 @@
+/* Style the contact form container */
+.contact {
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin: 20px 0;
+}
+/* Style the form labels */
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+/* Style the input fields */
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+/* Style the textarea */
+.contact textarea {
+    height: 100px;
+    resize: vertical;
+}
+/* Style the submit button */
+.contact button[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Add hover effect to submit button */
+.contact button[type="submit"]:hover {
+    background-color: #45a049;
+}

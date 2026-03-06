@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om oss</title>
+    <link rel="stylesheet" href="/CSS/Om_oss.css">
+    <script src="om_oss.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <!-- container centrerar innehållet och ger marginaler på sidorna-->
+        <div class="container">
+
+            <!-- navbar-brand = logotyp eller webbplatsens namn-->
+            <a class="navbar-brand" href="/index.html"><img src="/img/logo.jpg" width="110px" height="45px"></a>
+                <!-- navbar-toggler = en knapp osm visas på små skärmar (hamburgermeny).
+                data-bs-toggle="collapse" (aktiverar Bootstrap-funktionen)
+                data-bstarget="#menu" (kopplar knappen till elementet med id="menu")-->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                >
+                <!-- Ikonen som visas i toggler knappen-->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <!-- collapse navbar-collapse = menyn kan fällas ihop.
+                id="menu" måste matcha data-bs-target i knappen ovan-->
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- navbar-nav är listan med navigationslänkar.
+                ms-auto = betyder margin-start auto och flyttar menyn åt höger-->
+                <ul class="navbar-nav ms-auto">
+                        <!-- nav-item = varje menyval-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Hem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Om_oss.html">Om oss</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Kontakt/kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="tableContainer">
+        <h3>Våra gym</h3><br>
+        <p>Våra gym finns över hela Stockholm</p>
+        <!-- loadGyms() är funktionen för XML Request (Tabellen av våra gym.)-->
+        <button type="button" onclick="loadGyms()" id="table_btn">Få tabell</button>
+        <br><br>
+        <table id="gyms"></table>
+        
+    </div>
+        <footer class="ftr">
+        <p>&copy; Aktiv est.2026</p>
+    </footer>
+</body>
+</html>

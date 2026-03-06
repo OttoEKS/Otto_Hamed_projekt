@@ -1,3 +1,15 @@
+/* Style för navbar logga*/
+#logo_nav {
+    height: 45px;
+    width: 110px;
+}
+#logo_nav:hover {
+    cursor: pointer;
+    height: 50px;
+    width: 120px;
+}
+
+/* Template areas för <header>, <main>, <side> & <footer> i <body>*/
 body {
     display: grid;
         grid-template-areas: 
@@ -5,32 +17,48 @@ body {
         "main main main side side side"
         "ftr ftr ftr ftr ftr ftr";
     grid-template-rows: auto auto auto;
-    gap: 3px;
+    gap: 5px;
+}
+.main, .side, .ftr {
+    background-color: rgba(186, 186, 186, 0.258);
+    border-radius: 6px;
+    border: 2px solid black;
 }
 .hdr {
     grid-area: hdr;
 }
 .main {
     grid-area: main;
-    border: 2px solid black;
 }
+/* Style för side och side elementen*/
 .side {
     grid-area: side;
     border: 2px solid black;
     text-align: center;
 }
+#readyBtn {
+    height: 40px;
+    border-radius: 6px;
+    background-color: rgb(57, 115, 239);
+    color: white;
+}
+#readyBtn:hover {
+    background-color: green;
+}
+#bench, #band, #hantlar, #lokal {
+    border-radius: 8px;
+}
+
+/* Style för footer*/
 .ftr {
     grid-area: ftr;
     background-color: darkblue;
     color: white;
     text-align: center;
     padding-top: 7px;
-    border: 2px solid black;
 }
 
-.txt_area {
-    text-align: center;
-}
+/* Style för bilderna i cards i <main>*/
 #imgGrupp {
     width: 150px;
     height: 120px;
@@ -52,3 +80,36 @@ body {
     border-radius: 20%;
 }
 
+/* Style för <div> i <main> som innehåller alla personliga tränare. */
+.txt_area {
+    text-align: center;
+}
+
+.Pt1Container {
+    padding-top: 10px;
+    border-radius: 2%;
+    #Pt1_img {
+        height: 160px;
+        width: 165px;
+        border-radius: 100%;
+    }
+}
+
+.Pt2Container {
+    padding-top: 10px;
+    border-radius: 2%;
+    #Pt2_img {
+        height: 160px;
+        width: 165px;
+        border-radius: 100%;
+    }
+}
+.Pt3Container {
+    padding-top: 10px;
+    border-radius: 2%;
+    #Pt3_img {
+        height: 160px;
+        width: 165px;
+        border-radius: 100%;
+    }
+}

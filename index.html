@@ -6,35 +6,32 @@
     <title>Projekt | Webbutveckling 2</title>
     <link href="/CSS/index.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/jQuery/JS_library.js"></script>
+    <script src="/jQuery/index_side.js"></script>
     <!-- Första sidan (HOME) -->
 </head>
 <body>
-        <!-- Navbar skapar en navigationsmeny högst upp på sidan.
-     navbar-expand-lg = menyn är ihopfälld på små skärmar och
-     visas horisontellt från large (lg) och uppåt.
-     navbar-dark + bg-dark = mörk bakgrund och ljus text.-->
+    <!-- Bootstrap navbar-->
     <header class="hdr">
+        <!-- Navbar skapar en navigationsmeny högst upp på sidan. navbar-expand-lg = menyn är ihopfälld på små skärmar och
+        visas horisontellt från large (lg) och uppåt. navbar-dark + bg-dark = mörk bakgrund och ljus text.-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
             <!-- container centrerar innehållet och ger marginaler på sidorna-->
             <div class="container">
-
                 <!-- navbar-brand = logotyp eller webbplatsens namn-->
-                <a class="navbar-brand" href="#"><img src="/img/logo.jpg" width="110px" height="45px"></a>
-
-                    <!-- navbar-toggler = en knapp osm visas på små skärmar (hamburgermeny).
-                    data-bs-toggle="collapse" (aktiverar Bootstrap-funktionen)
-                    data-bstarget="#menu" (kopplar knappen till elementet med id="menu")-->
+                <a class="navbar-brand" href="index.html"><img src="/img/logo.jpg" alt="logo" id="logo_nav"></a>
+                    <!-- navbar-toggler = en knapp osm visas på små skärmar (hamburgermeny). 
+                     data-bs-toggle="collapse" (aktiverar Bootstrap-funktionen)
+                     data-bstarget="#menu" (kopplar knappen till elementet med id="menu")-->
                 <button
                     class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#menu"
                     >
-                    <!-- Ikonen som visas i toggler-lnappen-->
+                    <!-- Ikonen som visas i toggler knappen-->
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <!-- collapse navbar-collapse = menyn kan fällas ihop.
                 id="menu" måste matcha data-bs-target i knappen ovan-->
                 <div class="collapse navbar-collapse" id="menu">
@@ -43,37 +40,55 @@
                     <ul class="navbar-nav ms-auto">
                         <!-- nav-item = varje menyval-->
                         <li class="nav-item">
-                            <!-- nav-link = själva länken-->
-                            <a class="nav-link" href="#">Hem</a>
+                            <!-- Länk till hem (Blir som en reload av startsidan)-->
+                            <a class="nav-link" href="index.html">Hem</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Om oss</a>
+                            <!-- Länk till Om oss sidan-->
+                            <a class="nav-link" href="/Om_oss/Om_oss.html">Om oss</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Kontakt</a>
+                            <!-- Länk till kontakt formuläret-->
+                            <a class="nav-link" href="/Kontakt/kontakt.html">Kontakt</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </header>
+    </header> 
     <sidebar class="side">
         <div>
-            <p>innehåll</p>
+            <img src="/img/logo.jpg" alt="logo" height="120px" width="100%">
+            <br><br>
+            <p><b>Gymmet för dig som älskar träning</b></p>
         </div>
         <br>
         <div>
-            <p>innehåll</p>
+            <!-- jQuery funktion för interaktivitet för användaren (Motivations knapp)-->
+            <button type="button" id="readyBtn">Är du redo?</button>
+            <br><br>
+            <p id="readyText">Jag tänker fortfarande...</p>
+        </div>
+        <br><br>
+        <div>
+            <!-- Bilder för att fylla ut innehållet i <sidebar> -->
+            <img src="/img/gymbench.jpg" alt="bench" id="bench" height="180px" width="100%">
+            <br><br>
+            <img src="/img/springband.jpg" alt="band" id="band" height="180px" width="100%">
+            <br><br>
+            <img src="/img/hantlar.jpg" alt="hantlar" id="hantlar" height="180px" width="100%">
+            <br><br>
+            <img src="/img/lokal.jpg" alt="lokal" id="lokal" height="180px" width="100%">
         </div>
     </sidebar>
     <main class="main">
-        <!-- Container som håller allt innegåll centrerat + padding på y-axeln. -->
+        <!-- Container som håller allt innehåll centrerat + padding på y-axeln. -->
         <div class="container py-4">
-            <!-- Rubrike med marginal under (margin-bottom 3) -->
+            <!-- Rubrik med marginal under (margin-bottom 3) -->
             <h2 class="mb-3">Aktiv | pass💪</h2>
             <!-- Row = rad i Bootsrap grid, g-3 = mellanrum mellan kolumner-->
             <div class="row g-3">
-                <!-- Första kolumnen -->
+                <!-- Första kolumnen med första kortet -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <!-- Kolumn: 100% på mobil, 50% på medium, 33% på large -->
                     <div class="card h-100">
@@ -81,21 +96,25 @@
                         <div class="card-body">
                             <!-- Titel på kortet -->
                             <h5 class="card-title">Gruppträning 💪</h5>
-                            <!-- Beskrivande text -->
+                            <!-- Beskrivning av träningen + bild-->
                             <p class="card-text">Hög intesitet! <img src="/img/grupp.jpg" alt="grupp" id="imgGrupp"></p>
                             <hr style="height: 5px; border: 5px solid darkblue;">
-                            <a href="#" class="btn btn-primary">Boka</a>
+                            <!-- Länk till boknings sidan för Gruppträning-->
+                            <a href="/HTML_startsida_filer/boka_Grupp.html" class="btn btn-primary">Boka</a>
                         </div>
                     </div>    
                 </div>
-                <!-- Andra kolumnen (samma grid-system)-->
+                <!-- Andra kolumnen med 2a kortet-->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100">
                         <div class="card-body">
+                            <!-- Titel på kortet-->
                             <h5 class="card-title">Spinning klasser 🚴🏼</h5>
+                            <!-- Beskrivning av träningen + bild-->
                             <p class="card-text">Svettas och upplev gemenskap! <img src="/img/spinning.avif" alt="spinning" id="imgSpinning"></p>
                             <hr style="height: 5px; border: 5px solid darkblue;">
-                            <a href="#" class="btn btn-primary">Boka</a>
+                            <!-- Länk till boknings sidan för Spinning-->
+                            <a href="/HTML_startsida_filer/boka_Spinning.html" class="btn btn-primary">Boka</a>
                         </div>
                     </div>    
                 </div>
@@ -103,37 +122,45 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100">
                         <div class="card-body">
+                            <!-- Titel på kortet-->
                             <h5 class="card-title">Yoga pass 🧘</h5>
+                            <!-- Beskrivning av träningen + bild-->
                             <p class="card-text">Flexibilitet och styrka! <img src="/img/yoga.jpg" alt="yoga" id="imgYoga"></p>
-                            <hr style="height: 5px; border: 5px solid darkblue;">                        
-                            <a href="#" class="btn btn-primary">Boka</a>
+                            <hr style="height: 5px; border: 5px solid darkblue;">
+                            <!-- Länk till boknings sidan för Yoga-->                        
+                            <a href="/HTML_startsida_filer/boka_Yoga.html" class="btn btn-primary">Boka</a>
                         </div>
                     </div>    
                 </div>
             </div>
         </div>
         <br>
+        <!-- Innehåller Personliga tränare-->
         <div class="txt_area">
             <div>
                 <h1>Våra Personliga tränare</h1>
-                <div>
+                <div class="Pt1Container">
+                    <img src="/img/PTAndreas.jpg" alt="Pt1" id="Pt1_img">
                     <h3>Andreas</h3>
                     <p>HAkbfllafljnalsnfnkjbgjknjnlksdngnkjdgjdsljngjlndsjgjdsj</p>
                 </div>
                 <br>
-                <div>
+                <div class="Pt2Container">
+                    <img src="/img/PTJosefin.jpg" alt="Pt2" id="Pt2_img" height="100px" width="100px">
                     <h3>Josefin</h3>
                     <p>naonfljnbgskmfingjknsdoginsgjindslgnksdogndsjnfiknmfghjk</p>
                 </div>
                 <br>
-                <div>
+                <div class="Pt3Container">
+                    <img src="/img/PTBjörn.jpg" alt="Pt3" id="Pt3_img" height="100px" width="100px">
                     <h3>Björn</h3>
                     <p>jnlfgfsvgdbhnjmksdfghjklduiopfdsdhjklölnbvcvbnmkjhgfksjh</p>
                 </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    </main>
+        </main>
+        <!-- Footer med info om grundnings året av gymmet-->
     <footer class="ftr">
         <p>&copy; Aktiv est.2026</p>
     </footer>
